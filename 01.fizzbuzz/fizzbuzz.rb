@@ -1,16 +1,12 @@
-a=1
-
-20.times{
-
-if a%15 == 0 
-  puts "fizzbuzz"
-elsif a%5 ==0
-  puts "buzz"
-elsif a%3 ==0
-  puts "fizz"
-else 
-  puts a
+20.times do |n|
+    if (n+1) % 15 == 0
+        puts "fizzbuzz"
+    elsif (n+1) % 5 ==0
+        puts "buzz"
+    elsif (n+1) % 3 ==0
+        puts "fizz"
+    else
+        puts (n+1)
+    end
 end
 
-a += 1
-}
