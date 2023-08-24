@@ -24,14 +24,15 @@ firstwday = Date.new(year,month,1).wday
 lastday = Date.new(year,month,-1).day
 
 #出力
-puts "#{month}月 #{year}".center(21)
-puts " 日 月 火 水 木 金 土"
+puts "#{month}月 #{year}".center(20)
+puts "日 月 火 水 木 金 土"
+#1日の表示位置あわせ
 firstwday.times do
   print '   '
 end
 wday = firstwday
 1.upto(lastday) do |date|
-  print date.to_s.rjust(3)
+  print date.to_s.rjust(2) + ' '
   if wday == 6
     print "\n"
     wday = 0
@@ -39,6 +40,6 @@ wday = firstwday
     wday += 1
   end
   if date == lastday
-    print "\n"
+    puts "\n "
   end
 end
